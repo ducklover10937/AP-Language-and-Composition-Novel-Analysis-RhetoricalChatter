@@ -18,7 +18,7 @@ st.markdown("<p style = 'text-align: center;'>Learn about <i>The Catcher in the 
 errorMsg = "I'm sorry, I couldn't understand your request."
 
 chatContainer = st.container()
-chat = st.text_input("""<style>.stTextInput {color: #332815; }</style>""",unsafe_allow_html=True, "What would you like to learn about The Catcher in the Rye?", value="", key="chatInput")
+chat = st.text_input("What would you like to learn about The Catcher in the Rye?", value="", key="chatInput", """<style>.stTextInput {color: #332815; }</style>""",unsafe_allow_html=True)
 
 analysisDict = {
     ("introduce", "introduction", "summary", "summarize", "overview"): "The Catcher in the Rye by J.D. Salinger explores the coming-of-age experience through the "
@@ -54,5 +54,6 @@ with chatContainer: #chat history
             st.markdown("<div style='background-color: #61503b; color: #f7ecd5; text-align: left; overflow-wrap:break-word; display:inline-block; padding: 10px; border-radius: 20px;'>"+chatEntry+"</div>", unsafe_allow_html=True)
         else:
             st.markdown("<div style='background-color: #fffbd4; color: #332815; text-align: left; overflow-wrap:break-word; float: right;display:inline-block; padding: 10px; border-radius: 20px;'>"+chatEntry+"</div>", unsafe_allow_html=True)
+
 
 
